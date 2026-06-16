@@ -37,3 +37,6 @@ Configs:
     create a symbolic link so the system can locate the executable from anywhere
         `sudo ln -s /opt/waterfox/waterfox /usr/local/bin/waterfox`
 
+- setting <Super>p shortcut:
+    add command `bash /home/{user}/scripts/toggle-displays.sh`
+
