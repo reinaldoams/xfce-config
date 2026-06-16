@@ -19,6 +19,9 @@ alias stop-ai="sudo pkill ollama ; docker stop open-webui ; docker rm open-webui
 Configs:
 - Remove light-locker to prevent screen from automatically turning off and locking
     sudo apt purge light-locker
+    - also, disable with this system-level command
+
+    sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
 - Add these to /etc/environment to prevent cedilla bug:
     `GTK_IM_MODULE=cedilla
@@ -33,3 +36,4 @@ Configs:
     download .tar.bz2, extract, move extracted `/waterfox` folder to `/opt/`
     create a symbolic link so the system can locate the executable from anywhere
         `sudo ln -s /opt/waterfox/waterfox /usr/local/bin/waterfox`
+
